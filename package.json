@@ -1,0 +1,23 @@
+{
+  "name": "spot-api",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/spot-api.umd.cjs",
+  "module": "./dist/spot-api.js",
+  "exports": {
+    ".": {
+      "import": "./dist/spot-api.js",
+      "require": "./dist/spot-api.umd.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build --watch"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0"
+  },
+  "dependencies": {
+    "vite": "^5.3.3"
+  }
+}
