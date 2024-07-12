@@ -1,21 +1,13 @@
 /**
- * ==============================
- * ========= Components =========
- * ==============================
+ * Fetched Messages from the Spot API
+ *
+ * https://www.findmespot.com/en-us/support/spot-gen4/get-help/general/public-api-and-xml-feed
+ *
+ * @param {string} feedId - The feed id of the messages
+ * @returns {Promise} - The fetched messages
+ * @throws {Error} - If the fetch fails
+ *
  */
-
-/**
- * ==============================
- * ========= Composables ========
- * ==============================
- */
-
-/**
- * ==============================
- * ========= Exports ============
- * ==============================
- */
-
 export async function fetchSpotMessages(feedId) {
   const url = `https://api.findmespot.com/spot-main-web/consumer/rest-api/2.0/public/feed/${feedId}/message.json`;
 
