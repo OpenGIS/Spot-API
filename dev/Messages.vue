@@ -1,9 +1,3 @@
-<!--
-  .env file:
-VITE_SPOT_FEED_ID=0WUgDxCCFJP51Jv4FVrOEqOcMVXASErYj
-VITE_SPOT_FEED_START=2024-07-12T00:00:00-0000
-VITE_SPOT_FEED_END=2024-07-13T00:00:00-0000
--->
 <script setup>
 import { ref, onMounted, watch } from "vue";
 import { fetchSpotMessages } from "@/main.js";
