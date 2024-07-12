@@ -1,6 +1,6 @@
 {
   "name": "@ogis/spot-api",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A JavaScript Library for interacting with the Find Me Spot Messaging API",
   "repository": {
     "type": "git",
@@ -13,8 +13,8 @@
   },
   "homepage": "https://github.com/OpenGIS/Spot-API#readme",
   "type": "module",
-  "main": "./dist/spot-api.umd.cjs",
-  "module": "./dist/spot-api.js",
+  "main": "./src/main.js",
+  "module": "./src/main.js",
   "exports": {
     ".": {
       "import": "./dist/spot-api.js",
