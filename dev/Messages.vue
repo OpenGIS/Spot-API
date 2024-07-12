@@ -1,16 +1,3 @@
-<template>
-  <div>
-    <input v-model="feedId" placeholder="Enter Feed ID" />
-    <button @click="getMessages">Fetch Messages</button>
-
-    <div v-if="error" class="error">{{ error }}</div>
-
-    <div id="map" class="map"></div>
-
-    <pre>{{ messages }}</pre>
-  </div>
-</template>
-
 <script setup>
 import { ref, onMounted, watch } from "vue";
 import { fetchSpotMessages } from "@/main.js";
@@ -120,12 +107,37 @@ watch(messages, (newMessages) => {
 });
 </script>
 
+<template>
+  <h1>Spot Messages API</h1>
+
+  <div>
+    <input v-model="feedId" placeholder="Enter Feed ID" />
+    <button @click="getMessages">Fetch Messages</button>
+
+    <div v-if="error" class="error">{{ error }}</div>
+
+    <div id="map" class="map"></div>
+
+    <textarea>{{ messages }}</textarea>
+
+    <a
+      href="https://www.findmespot.com/en-us/support/spot-gen4/get-help/general/public-api-and-xml-feed"
+      >Spot Documentation</a
+    >
+  </div>
+</template>
+
 <style>
 .map {
+  margin: 10px 0;
   width: 100%;
   height: 400px;
 }
 .error {
   color: red;
+}
+textarea {
+  width: 100%;
+  height: 200px;
 }
 </style>

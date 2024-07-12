@@ -17,9 +17,6 @@ export default defineConfig({
       entry: resolve(__dirname, "src/main.js"),
     },
     rollupOptions: {
-      input: {
-        app: "./dev/index.html",
-      },
       output: {
         assetFileNames: "spot-api.[ext]",
       },
