@@ -4,7 +4,16 @@ A JavaScript Library for interacting with the Find Me [Spot Messaging API](https
 
 ![Spot API](./dev/data/screenshot.png)
 
-# Usage
+## Usage
+
+### Installation
+
+```bash
+# Install the library
+npm install @ogis/spot-api
+```
+
+### Fetch Spot Messages
 
 ```javascript
 import { fetchSpotMessages } from "@ogis/spot-api";
