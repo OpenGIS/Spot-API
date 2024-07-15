@@ -4,6 +4,25 @@ A JavaScript Library for interacting with the Find Me [Spot Messaging API](https
 
 ![Spot API](./dev/data/screenshot.png)
 
+# Usage
+
+```javascript
+import { fetchSpotMessages } from "@ogis/spot-api";
+
+const feedId = "0onlLopfoM4bG5jXvWRE8H0Obd0oMxMBq";
+const startDate = "2012-07-03T00:00:00-0000";
+const endDate = "2012-08-02T00:00:00-0000";
+
+fetchSpotMessages(feedId, startDate, endDate)
+	.then((messages) => {
+		// Do something with the messages
+		console.log(messages);
+	})
+	.catch((error) => {
+		console.error(error);
+	});
+```
+
 ## Development
 
 ```bash

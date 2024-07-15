@@ -3,10 +3,13 @@
  * @param {string} dateString - The date string to convert
  * @returns {string} - The Spot date string
  * @throws {Error} - If the date string is invalid
- * @note - Spot date strings are in the format "2009-01-22T13:08:55-0800" i.e. No trailing Z, No milliseconds, Always use -0000 for the timezone
+ * @note - Spot date strings are in the format "2024-07-14T16:00:00+0000" i.e. No trailing Z, No milliseconds, Always use +0000 for the timezone
  */
 export function toSpotDate(dateString) {
-  return new Date(dateString).toISOString().split(".")[0] + "-0000";
+  let str = new Date(dateString).toISOString().split(".")[0] + "+0000";
+
+  // Spot API requires + to be encoded
+  return str.replace("+", "%2b");
 }
 
 /**
@@ -35,6 +38,8 @@ export async function fetchSpotMessages(feedId, startDate, endDate) {
   }
 
   if (params.length > 0) url += `?${params.join("&")}`;
+
+  console.log(url);
 
   const response = await fetch(url);
 

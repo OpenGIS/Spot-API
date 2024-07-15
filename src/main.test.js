@@ -123,8 +123,7 @@ describe("fetchSpotMessages", () => {
 						error: {
 							code: "E-0195",
 							text: "No Messages to display",
-							description:
-								"No displayable messages found found for feed: 0WUgDxCCFJP51Jv4FVrOEqOcMVXASErYj",
+							description: "No displayable messages found found for feed.",
 						},
 					},
 				},
