@@ -39,8 +39,6 @@ export async function fetchSpotMessages(feedId, startDate, endDate) {
 
   if (params.length > 0) url += `?${params.join("&")}`;
 
-  console.log(url);
-
   const response = await fetch(url);
 
   if (!response.ok) {
